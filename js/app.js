@@ -1,6 +1,6 @@
-const Template = angular.module('template', []);
+const App = angular.module('template', []);
 
-Template.config(function($interpolateProvider) {
+App.config(function($interpolateProvider) {
     $interpolateProvider.startSymbol('[[');
     $interpolateProvider.endSymbol(']]');
 });

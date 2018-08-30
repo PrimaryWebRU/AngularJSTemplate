@@ -1,10 +1,10 @@
 {
   "name": "AngularJSTemplate",
-  "version": "1.0.0",
-  "description": "My template",
+  "version": "1.0.1",
+  "description": "My angularjs template",
   "main": "index.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp watch"
   },
   "author": "PrimaryWebRU",
   "license": "GPL-3.0",

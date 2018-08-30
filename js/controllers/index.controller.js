@@ -1,3 +1,3 @@
-Template.controller('IndexController', function IndexController($scope) {
+App.controller('IndexController', function IndexController($scope) {
 	$scope.title = 'Angular JS Template';
 });
