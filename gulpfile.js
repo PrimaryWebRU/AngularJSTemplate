@@ -11,7 +11,7 @@ var gulp          = require('gulp'),
 gulp.task('browser-sync', function() {
 	browserSync({
 		server: {
-			baseDir: './'
+			baseDir: 'app'
 		},
 		notify: false,
 		open: true
@@ -23,13 +23,13 @@ gulp.task('styles', function() {
 	.pipe(sass({ outputStyle: 'expand' }).on("error", notify.onError()))
 	.pipe(autoprefixer(['last 15 versions']))
 	.pipe(cleancss( {level: { 1: { specialComments: 0 } } })) // Opt., comment out when debugging
-	.pipe(gulp.dest('./css'))
+	.pipe(gulp.dest('app/css'))
 	.pipe(browserSync.stream())
 });
 
 gulp.task('watch', ['styles', 'browser-sync'], function() {
-	gulp.watch('./scss/**/*.scss', ['styles']);
-	gulp.watch(['./*.html', './**/*.js'], browserSync.reload);
+	gulp.watch('app/scss/**/*.scss', ['styles']);
+	gulp.watch(['app/*.html', 'app/**/*.js'], browserSync.reload);
 });
 
 gulp.task('default', ['watch']);
